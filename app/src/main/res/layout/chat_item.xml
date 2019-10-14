@@ -14,7 +14,7 @@
 
         <TextView
             android:textStyle="bold"
-            android:textColor="@android:color/black"
+            android:textColor="#838383"
             android:layout_marginLeft="1dp"
             android:layout_marginBottom="3dp"
             android:textSize="12dp"
