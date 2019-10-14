@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <ListView
@@ -10,26 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="#fff"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
         android:layout_weight="2"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:orientation="horizontal">
 
         <EditText
-            android:cursorVisible="false"
-            android:background="@drawable/background_chat_input_bubble"
-            android:inputType="textMultiLine"
+            android:textColorHint="#C4C4C4"
+            android:hint="Type a message..."
             android:id="@+id/edtMessageInput"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="textMultiLine"
             android:layout_weight="2"
-            android:ems="10"
-            android:paddingHorizontal="10dp"
-            android:textColor="@android:color/white"
-            android:text="" />
+            android:background="@drawable/background_chat_input_bubble"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
         <ImageButton
             android:id="@+id/btnMessageSend"
@@ -39,6 +45,6 @@
             android:scaleType="fitCenter"
             android:padding="10dp"
             android:layout_marginHorizontal="10dp"
-            android:background="@drawable/send_icon"/>
+            android:background="@drawable/ic_send_black_24dp"/>
     </LinearLayout>
 </LinearLayout>
