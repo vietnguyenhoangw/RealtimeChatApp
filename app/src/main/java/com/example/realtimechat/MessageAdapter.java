@@ -18,7 +18,7 @@ public class MessageAdapter extends ArrayAdapter {
     Context context;
     ArrayList<Message> arrayList;
 
-    TextView editUserName, editMessage;
+    TextView editUserName, editMessage, editUserNameSend, editMessageSend;
 
     public MessageAdapter(Context context, int layout, ArrayList<Message> arrayList) {
         super(context, layout, arrayList);
@@ -35,11 +35,23 @@ public class MessageAdapter extends ArrayAdapter {
 
         editUserName = convertView.findViewById(R.id.edtUserName);
         editMessage = convertView.findViewById(R.id.edtMessage);
+        editUserNameSend = convertView.findViewById(R.id.edtUserNameSend);
+        editMessageSend = convertView.findViewById(R.id.edtMessageSend);
 
         Message message = arrayList.get(position);
 
-        editUserName.setText(message.getUser());
-        editMessage.setText(message.getMessage());
+        if (message.getUser().equals(MainActivity.UserName)) {
+            editUserNameSend.setText(message.getUser());
+            editMessageSend.setText(message.getMessage());
+            editMessage.setVisibility(View.INVISIBLE);
+            editUserName.setVisibility(View.INVISIBLE);
+        }
+        else {
+            editMessage.setText(message.getMessage());
+            editUserName.setText(message.getUser());
+            editMessageSend.setVisibility(View.INVISIBLE);
+            editUserNameSend.setVisibility(View.INVISIBLE);
+        }
 
         return convertView;
     }

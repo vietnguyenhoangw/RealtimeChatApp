@@ -2,36 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingRight="150dp"
-    android:orientation="vertical">
+    android:layout_marginTop="2dp"
+    android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
-            android:textStyle="bold"
-            android:textColor="#838383"
-            android:layout_marginLeft="1dp"
-            android:layout_marginBottom="3dp"
-            android:textSize="12dp"
             android:id="@+id/edtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UserName" />
+            android:layout_margin="1dp"
+            android:layout_marginBottom="3dp"
+            android:text="UserName"
+            android:textColor="#838383"
+            android:textSize="12dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:textColor="@android:color/white"
-            android:background="@drawable/background_chat_bubble"
-            android:padding="10dp"
-            android:textSize="15dp"
             android:id="@+id/edtMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ojasoidhciuqwiehjciojqweijciqwjecjiawjneicwa" />
+            android:background="@drawable/background_chat_bubble"
+            android:padding="10dp"
+            android:text="ojasoidhciuqwiehjciojqweijciqwjecjiawjneicwa"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/edtUserNameSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="3dp"
+            android:text="UserName"
+            android:textColor="#838383"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/edtMessageSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_chat_bubble_send"
+            android:padding="10dp"
+            android:text="ojasoidhciuqwiehjciojqweijciqwjecjiawjneicwa"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
     </LinearLayout>
 
 </LinearLayout>
